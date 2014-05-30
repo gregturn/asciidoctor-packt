@@ -46,3 +46,6 @@ means you still have to make some manual edits after-the-fact. See TODO.adoc for
 The core of asciidoc-odt, for some reason, only properly formats the first image. Subsequent images are inserted, but shrunk down to where you
 almost can't see them. Whereas Packt actually yanks the inline images and inserts the attached images you ship, you still need to see them during
 proofs and for some hint of the real size of your manuscript.
+
+NOTE: `packt-template.fodt` and `packt-template.ott` are owned solely by Packt Publishing Ltd (http://packtpub.com). Their usage in this project
+is strictly for non-commercial usage in support of writing manuscripts for them. Any other usage may require contact Packt Publishing directly.

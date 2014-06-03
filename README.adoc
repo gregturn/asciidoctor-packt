@@ -30,6 +30,8 @@ The project is not yet in a downloadable, installable zip file (yet). For now:
 
 You should be all set. Now you can run `asciidoc -b packt --theme packt your.adoc` and it will spit out `your.fodt`.
 
+NOTE: These steps have so far, been executed on a mac. I haven't explored them on any other platform.
+
 NOTE: FODT stands for Flat ODT, or the human readable, XML-based OpenOffice doc format. You can always open an FODT
 and Save As to ODT format to submit to Packt.
 

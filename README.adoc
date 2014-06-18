@@ -13,7 +13,8 @@ If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, e
 ==== Getting started
 
 [verse, Greg L. Turnquist]
-"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot."
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work 
+as I embark on writing Learning Spring Boot."
 
 . First, grab this project with `git clone git@github.com:gregturn/asciidoc-packt.git`
 . Second, install http://asciidoctor.org
@@ -24,7 +25,7 @@ If you'll notice, all lines of that numbered list are tagged **Numbered Bullet [
 To run things, you just need a handy dandy script:
 
 ----
-$ asciidoctor -T slim -b packt book.adoc && xmllint -format book.fodt
+$ asciidoctor -T slim -b packt README.adoc && xmllint -format README.fodt
 ----
 
 The output will be compacted XML, so it will be **hard** to read. That why running it through
@@ -90,3 +91,11 @@ copyright notices.
 ==== Good to know stuff...
 
 * Don't embed :author: or :title: attributes at the top. They end up getting printed which fouls up the product you must ship to Packt.
+
+==== In case you didn't notice
+
+This README page is structured in the theme of Packt. It might not render perfectly on GitHub, but when viewed through a text editor, 
+and certainly when converted by this backend to LibreOffice, it should provide a nice example of writing a manuscript for Packt.
+
+NOTHING is done to make it look good on GitHub, because that is not the target. BUT...why waste a keen opportunity to document both
+environments?

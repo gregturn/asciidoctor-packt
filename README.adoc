@@ -106,7 +106,7 @@ Well, there are actually a lot of other styles provided by Packt not handled her
 That is too much, and frankly, I don't much care for that stuff. Too detailed and really
 pulls me away from writing, so I don't support it.
 
-WARNING: All styles embedded in this backend are owned by Packt Publishing Ltd. and potentially subject to their
+WARNING: All styles embedded in this backend are owned by Packt Publishing Ltd. (http://packtpub.com) and potentially subject to their
 copyright notices.
 
 ==== Good to know stuff...

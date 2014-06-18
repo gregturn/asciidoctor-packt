@@ -1,3 +1,5 @@
+:toc:
+
 [quote, Dan Allen - project lead for Asciidoctor]
 ____
 "If Markdown is a 1st-grader, then AsciiDoc is a PhD student."

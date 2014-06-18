@@ -1,81 +1,92 @@
-= Packt Publishing Converter for AsciiDoc / Asciidoctor
-Greg Turnquist
-:toc:
+== 43
+=== Writing for Packt with Asciidoctor
 
-[quote, Dan Allen - project lead for Asciidoctor]
-If Markdown is a 1st-grader, then AsciiDoc is a PhD student.
+In this chapter, you'll learn:
 
-This project is an AsciiDoc backend and theme designed to let you write titles for Packt Publishing.
+* How to create a Packt manuscript using `asciidoctor` (http://asciidoctor.org)
+* How to write your text calmly, and let the tools do the layouts for you.
+* How to embed images, source code, and create bullets, notes, etc.
 
-WARNING: This is a tool to help write manuscripts. If you use this for writing a title for Packt you assume ALL risk with said process.
+If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, except the last. It's tagged
+**Bullet End [PACKT]**.
 
-== Why?
+==== Getting started
 
-I was starting my http://blog.greglturnquist.com/category/learning-spring-boot[third title] and felt like a word processor was too clunky to integrate code, images,
-prose, and code-in-text. Having written technical docs for the past year using AsciiDoc, I rummaged around and found https://github.com/dagwieers/asciidoc-odf. It
-worked pretty good, except the formatting is different. So I strove to create my own theme, using styles from Packt.
+[verse, Greg L. Turnquist]
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot."
 
-== How to use
+. First, grab this project with `git clone git@github.com:gregturn/asciidoc-packt.git`
+. Second, install http://asciidoctor.org
+. Third, run this book and see what happens!
 
-The project is not yet in a downloadable, installable zip file (yet). For now:
+If you'll notice, all lines of that numbered list are tagged **Numbered Bullet [PACKT]**, except the last. It's tagged **Numbered Bullet End [PACKT]**.
 
-. Download or clone this project.
-. Go to `~/.asciidoc`
-. `mkdir -p backends/packt`
-. `mkdir -p themes/packt`
-. `cd backends/packt`
-. `ln -s /path/to/asciidoc-packt/packt.conf`
-. `ln -s /path/to/asciidoc-packt/packt.odt.styles`
-. `cd ../themes/packt`
-. `ln -s /path/to/asciidoc-packt/packt.odt.styles`
+To run things, you just need a handy dandy script:
 
-You should be all set. Now you can run `asciidoc -b packt --theme packt your.adoc` and it will spit out `your.fodt`.
+----
+$ asciidoctor -T slim -b packt book.adoc && xmllint -format book.fodt
+----
 
-NOTE: These steps have so far, been executed on a mac. I haven't explored them on any other platform.
+The output will be compacted XML, so it will be **hard** to read. That why running it through
+`xmllint` is handy.
 
-NOTE: FODT stands for Flat ODT, or the human readable, XML-based OpenOffice doc format. You can always open an FODT
-and Save As to ODT format to submit to Packt.
+NOTE: You have to ensure `xmllint` is installed. It's not part of this project.
 
-IMPORTANT: In order to open FODT files on Fedora, you must have the libreoffice-xsltfilter package installed.
+From here, you can start writing your own manuscript for Packt. The core content will be towards the end, inside the `<office:body>` tag. Everything
+before hand are Packt's styles embedded so LibreOffice will make everything look nice. 
 
-The nice side effect is that you can now include images, include source code, and know that things will be properly
-generated and formatted nicely for submission.
+Cheers!
 
-== Asciidoctor support
+WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
+on you assume ALL risk.
 
-Dan Allen has helped me by launching a slim template for packt. This is to get asciidoctor support going. So far, I
-made a good go of things. You can find the work underneath slim/packt.
+===== Subsections
 
-To use it, 
+Yes, we handle subsections, but so far, levels 2-5.
 
-```
-asciidoctor -T /path/to/your/clone/asciidoc-packt/slim -b packt your.adoc 
-```
+* Level 2 is for the chapter number
+* Level 3 is for the chapter title
+* Level 4 is for major sections
+* Level 5 is for sub-sections
 
-This will crank out your.fodt, and you can definitely open it up! It doesn't have all the parts and some things don't
-work quite right. But with a bit more effort, this might take over the work of this project.
+It might be possible to go deeper, but I frankly haven't needed that yet.
 
-=== Asciidoctor issues
+NOTE: This doesn't apply to Packt Cookbook formats.
 
-* Verseblock works, https://github.com/gregturn/asciidoc-packt/commit/92ce0d2eabe5ad3f701d675ad8e5491562747d57[except I can't seem to plugin attribution with any suitable spacing]
-* Image block doesn't work, because https://github.com/gregturn/asciidoc-packt/commit/d514c7786fdf125182e42352ed7567137041a065[it won't inject any of the attributes]
-* Code listings work pretty nice. However, it would be nice to break it up into multiple lines and flag the last line
-as a Code_End style. (This doesn't work with my asciidoc/post_processor setup either.)
-* Tried to code Keyword, but it goes nuts when plugging in **Key_20_Word_20__5b_PACKT_5d_** as the style. So, using
-what I use in asciidoc: plugin **strong** and then replace it in post processing, only inside normal/tips/bullets. 
-(Should probably expand post proessing to include numbered lists.)
-* Admonitions and tables not yet started.
+===== Tables
 
-== Outstanding issues
+We sure do cover them. Tables are an integral part of writing any manuscript. Check out the
+following table.
 
-This project is **highly experimental** . I haven't completed my manuscript yet.
+[options="header"]
+|====
+| Stuff         | Description
+| `asciidoctor` | command line tool to parse your doc
+| packt         | name of the backend to process this
+| slim          | THE simplest templating language designed to output XML. See http://slim-lang.com
+| **key word**  | threw in a keyword inside a table just for fun
+|====
+{empty}
 
-It can't find the end of a code listing or a bullet point listing. Packt has a different style for the last line of both and other styles. This
-means you still have to make some manual edits after-the-fact. See TODO.adoc for follow up edits.
+==== Images
 
-The core of asciidoc-odt, for some reason, only properly formats the first image. Subsequent images are inserted, but shrunk down to where you
-almost can't see them. Whereas Packt actually yanks the inline images and inserts the attached images you ship, you still need to see them during
-proofs and for some hint of the real size of your manuscript.
+image::cat.jpg[width="65%" height="30%"]
 
-NOTE: `packt-template.fodt` and `packt-template.ott` are owned solely by Packt Publishing Ltd (http://packtpub.com). Their usage in this project
-is strictly for non-commercial usage in support of writing manuscripts for them. Any other usage may require contact Packt Publishing directly.
+==== What are some of the things you don't cover?
+
+Well, there are actually a lot of other styles provided by Packt not handled here. 
+
+* Code-within-Tips
+* Tips-within-Tips
+* Bullets-within-Tips-within-Tips
+* etc.
+
+That is too much, and frankly, I don't much care for that stuff. Too detailed and really
+pulls me away from writing, so I don't support it.
+
+WARNING: All styles embedded in this backend are owned by Packt Publishing Ltd. and potentially subject to their
+copyright notices.
+
+==== Good to know stuff...
+
+* Don't embed :author: or :title: attributes at the top. They end up getting printed which fouls up the product you must ship to Packt.

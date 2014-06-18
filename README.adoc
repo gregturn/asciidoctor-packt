@@ -28,13 +28,21 @@ To run things, you just need a handy dandy script:
 $ asciidoctor -T slim -b packt README.adoc && xmllint -format README.fodt
 ----
 
-The output will be compacted XML, so it will be **hard** to read. That why running it through
+The output will be compacted XML (FODT), so it will be **hard** to read. That why running it through
 `xmllint` is handy.
 
 NOTE: You have to ensure `xmllint` is installed. It's not part of this project.
 
 From here, you can start writing your own manuscript for Packt. The core content will be towards the end, inside the `<office:body>` tag. Everything
 before hand are Packt's styles embedded so LibreOffice will make everything look nice. 
+
+Does your manuscript live elsewhere, and NOT in the same folder as this project? No problem!
+
+----
+$ asciidoctor -T /path/to/your/clone/of/asciidoc-packt/slim -b packt your.adoc 
+----
+
+IMPORTANT: In order to open FODT files on Fedora, you must have the **libreoffice-xsltfilter** package installed.
 
 Cheers!
 
@@ -99,3 +107,4 @@ and certainly when converted by this backend to LibreOffice, it should provide a
 
 NOTHING is done to make it look good on GitHub, because that is not the target. BUT...why waste a keen opportunity to document both
 environments?
+

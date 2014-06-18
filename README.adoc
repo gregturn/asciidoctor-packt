@@ -6,6 +6,7 @@ In this chapter, you'll learn:
 * How to create a Packt manuscript using `asciidoctor` (http://asciidoctor.org)
 * How to write your text calmly, and let the tools do the layouts for you.
 * How to embed images, source code, and create bullets, notes, etc.
+* Über easy ways to write your next book (and even use ü's!)
 
 If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, except the last. It's tagged
 **Bullet End [PACKT]**.
@@ -49,6 +50,18 @@ Cheers!
 WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
 on you assume ALL risk.
 
+==== Code
+
+Nothing is complete without looking at code.
+
+[source,java]
+----
+include::samples/app.groovy[]
+----
+
+This chunk of code is Groovy (http://groovy.codehaus.org). It contains the `@RestController` to flag the entire class as being a controller that
+returns values directly back to the client, without invoking any views.
+
 ===== Subsections
 
 Yes, we handle subsections, but so far, levels 2-5.
@@ -79,7 +92,7 @@ following table.
 
 ==== Images
 
-image::cat.jpg[width="65%" height="30%"]
+image::samples/cat.jpg[width="65%" height="30%"]
 
 ==== What are some of the things you don't cover?
 

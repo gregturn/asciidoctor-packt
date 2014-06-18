@@ -1,0 +1,81 @@
+= Packt Publishing Converter for AsciiDoc / Asciidoctor
+Greg Turnquist
+:toc:
+
+[quote, Dan Allen - project lead for Asciidoctor]
+If Markdown is a 1st-grader, then AsciiDoc is a PhD student.
+
+This project is an AsciiDoc backend and theme designed to let you write titles for Packt Publishing.
+
+WARNING: This is a tool to help write manuscripts. If you use this for writing a title for Packt you assume ALL risk with said process.
+
+== Why?
+
+I was starting my http://blog.greglturnquist.com/category/learning-spring-boot[third title] and felt like a word processor was too clunky to integrate code, images,
+prose, and code-in-text. Having written technical docs for the past year using AsciiDoc, I rummaged around and found https://github.com/dagwieers/asciidoc-odf. It
+worked pretty good, except the formatting is different. So I strove to create my own theme, using styles from Packt.
+
+== How to use
+
+The project is not yet in a downloadable, installable zip file (yet). For now:
+
+. Download or clone this project.
+. Go to `~/.asciidoc`
+. `mkdir -p backends/packt`
+. `mkdir -p themes/packt`
+. `cd backends/packt`
+. `ln -s /path/to/asciidoc-packt/packt.conf`
+. `ln -s /path/to/asciidoc-packt/packt.odt.styles`
+. `cd ../themes/packt`
+. `ln -s /path/to/asciidoc-packt/packt.odt.styles`
+
+You should be all set. Now you can run `asciidoc -b packt --theme packt your.adoc` and it will spit out `your.fodt`.
+
+NOTE: These steps have so far, been executed on a mac. I haven't explored them on any other platform.
+
+NOTE: FODT stands for Flat ODT, or the human readable, XML-based OpenOffice doc format. You can always open an FODT
+and Save As to ODT format to submit to Packt.
+
+IMPORTANT: In order to open FODT files on Fedora, you must have the libreoffice-xsltfilter package installed.
+
+The nice side effect is that you can now include images, include source code, and know that things will be properly
+generated and formatted nicely for submission.
+
+== Asciidoctor support
+
+Dan Allen has helped me by launching a slim template for packt. This is to get asciidoctor support going. So far, I
+made a good go of things. You can find the work underneath slim/packt.
+
+To use it, 
+
+```
+asciidoctor -T /path/to/your/clone/asciidoc-packt/slim -b packt your.adoc 
+```
+
+This will crank out your.fodt, and you can definitely open it up! It doesn't have all the parts and some things don't
+work quite right. But with a bit more effort, this might take over the work of this project.
+
+=== Asciidoctor issues
+
+* Verseblock works, https://github.com/gregturn/asciidoc-packt/commit/92ce0d2eabe5ad3f701d675ad8e5491562747d57[except I can't seem to plugin attribution with any suitable spacing]
+* Image block doesn't work, because https://github.com/gregturn/asciidoc-packt/commit/d514c7786fdf125182e42352ed7567137041a065[it won't inject any of the attributes]
+* Code listings work pretty nice. However, it would be nice to break it up into multiple lines and flag the last line
+as a Code_End style. (This doesn't work with my asciidoc/post_processor setup either.)
+* Tried to code Keyword, but it goes nuts when plugging in **Key_20_Word_20__5b_PACKT_5d_** as the style. So, using
+what I use in asciidoc: plugin **strong** and then replace it in post processing, only inside normal/tips/bullets. 
+(Should probably expand post proessing to include numbered lists.)
+* Admonitions and tables not yet started.
+
+== Outstanding issues
+
+This project is **highly experimental** . I haven't completed my manuscript yet.
+
+It can't find the end of a code listing or a bullet point listing. Packt has a different style for the last line of both and other styles. This
+means you still have to make some manual edits after-the-fact. See TODO.adoc for follow up edits.
+
+The core of asciidoc-odt, for some reason, only properly formats the first image. Subsequent images are inserted, but shrunk down to where you
+almost can't see them. Whereas Packt actually yanks the inline images and inserts the attached images you ship, you still need to see them during
+proofs and for some hint of the real size of your manuscript.
+
+NOTE: `packt-template.fodt` and `packt-template.ott` are owned solely by Packt Publishing Ltd (http://packtpub.com). Their usage in this project
+is strictly for non-commercial usage in support of writing manuscripts for them. Any other usage may require contact Packt Publishing directly.

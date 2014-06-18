@@ -38,6 +38,20 @@ and Save As to ODT format to submit to Packt.
 The nice side effect is that you can now include images, include source code, and know that things will be properly
 generated and formatted nicely for submission.
 
+== Asciidoctor support
+
+Dan Allen has helped me by launching a slim template for packt. This is to get asciidoctor support going. So far, I
+made a good go of things. You can find the work underneath slim/packt.
+
+To use it, 
+
+```
+asciidoctor -T /path/to/your/clone/asciidoc-packt/slim -b packt your.adoc 
+```
+
+This will crank out your.fodt, and you can definitely open it up! It doesn't have all the parts and some things don't
+work quite right. But with a bit more effort, this might take over the work of this project.
+
 == Outstanding issues
 
 This project is **highly experimental** . I haven't completed my manuscript yet.

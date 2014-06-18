@@ -1,0 +1,92 @@
+== 43
+=== Writing for Packt with Asciidoctor
+
+In this chapter, you'll learn:
+
+* How to create a Packt manuscript using `asciidoctor` (http://asciidoctor.org)
+* How to write your text calmly, and let the tools do the layouts for you.
+* How to embed images, source code, and create bullets, notes, etc.
+
+If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, except the last. It's tagged
+**Bullet End [PACKT]**.
+
+==== Getting started
+
+[verse, Greg L. Turnquist]
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot."
+
+. First, grab this project with `git clone git@github.com:gregturn/asciidoc-packt.git`
+. Second, install http://asciidoctor.org
+. Third, run this book and see what happens!
+
+If you'll notice, all lines of that numbered list are tagged **Numbered Bullet [PACKT]**, except the last. It's tagged **Numbered Bullet End [PACKT]**.
+
+To run things, you just need a handy dandy script:
+
+----
+$ asciidoctor -T slim -b packt book.adoc && xmllint -format book.fodt
+----
+
+The output will be compacted XML, so it will be **hard** to read. That why running it through
+`xmllint` is handy.
+
+NOTE: You have to ensure `xmllint` is installed. It's not part of this project.
+
+From here, you can start writing your own manuscript for Packt. The core content will be towards the end, inside the `<office:body>` tag. Everything
+before hand are Packt's styles embedded so LibreOffice will make everything look nice. 
+
+Cheers!
+
+WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
+on you assume ALL risk.
+
+===== Subsections
+
+Yes, we handle subsections, but so far, levels 2-5.
+
+* Level 2 is for the chapter number
+* Level 3 is for the chapter title
+* Level 4 is for major sections
+* Level 5 is for sub-sections
+
+It might be possible to go deeper, but I frankly haven't needed that yet.
+
+NOTE: This doesn't apply to Packt Cookbook formats.
+
+===== Tables
+
+We sure do cover them. Tables are an integral part of writing any manuscript. Check out the
+following table.
+
+[options="header"]
+|====
+| Stuff         | Description
+| `asciidoctor` | command line tool to parse your doc
+| packt         | name of the backend to process this
+| slim          | THE simplest templating language designed to output XML. See http://slim-lang.com
+| **key word**  | threw in a keyword inside a table just for fun
+|====
+{empty}
+
+==== Images
+
+image::cat.jpg[width="65%" height="30%"]
+
+==== What are some of the things you don't cover?
+
+Well, there are actually a lot of other styles provided by Packt not handled here. 
+
+* Code-within-Tips
+* Tips-within-Tips
+* Bullets-within-Tips-within-Tips
+* etc.
+
+That is too much, and frankly, I don't much care for that stuff. Too detailed and really
+pulls me away from writing, so I don't support it.
+
+WARNING: All styles embedded in this backend are owned by Packt Publishing Ltd. and potentially subject to their
+copyright notices.
+
+==== Good to know stuff...
+
+* Don't embed :author: or :title: attributes at the top. They end up getting printed which fouls up the product you must ship to Packt.

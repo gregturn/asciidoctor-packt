@@ -1,14 +1,13 @@
+= Packt Publishing Converter for AsciiDoc / Asciidoctor
+Greg Turnquist
 :toc:
 
 [quote, Dan Allen - project lead for Asciidoctor]
-____
-"If Markdown is a 1st-grader, then AsciiDoc is a PhD student."
-____
+If Markdown is a 1st-grader, then AsciiDoc is a PhD student.
 
 This project is an AsciiDoc backend and theme designed to let you write titles for Packt Publishing.
 
 WARNING: This is a tool to help write manuscripts. If you use this for writing a title for Packt you assume ALL risk with said process.
-
 
 == Why?
 

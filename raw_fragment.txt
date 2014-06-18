@@ -1,0 +1,79 @@
+$ GITHUB_TOKEN=ccdbf257f052a594a0e7bd2823a69ae38a48ffb1 mvn clean spring-boot:run
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Issue Manager 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ issue-manager ---
+[INFO] Deleting /Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3/target
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:1.1.1.RELEASE:run (default-cli) @ issue-manager >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ issue-manager ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ issue-manager ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ issue-manager ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ issue-manager ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3/target/test-classes
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:1.1.1.RELEASE:run (default-cli) @ issue-manager <<<
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.1.1.RELEASE:run (default-cli) @ issue-manager ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.1.1.RELEASE)
+
+2014-06-11 16:55:13.685  INFO 54449 --- [           main] learningspringboot.Application           : Starting Application on retina with PID 54449 (/Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3/target/classes started by gturnquist in /Users/gturnquist/Dropbox/learning_spring_boot/2/issue-manager-3)
+2014-06-11 16:55:13.726  INFO 54449 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29b3822c: startup date [Wed Jun 11 16:55:13 CDT 2014]; root of context hierarchy
+2014-06-11 16:55:14.206  INFO 54449 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2014-06-11 16:55:14.658  INFO 54449 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2014-06-11 16:55:14.994  INFO 54449 --- [           main] .t.TomcatEmbeddedServletContainerFactory : Server initialized with port: 8080
+2014-06-11 16:55:15.182  INFO 54449 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2014-06-11 16:55:15.183  INFO 54449 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.54
+2014-06-11 16:55:15.257  INFO 54449 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2014-06-11 16:55:15.257  INFO 54449 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1533 ms
+2014-06-11 16:55:15.686  INFO 54449 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2014-06-11 16:55:15.688  INFO 54449 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2014-06-11 16:55:16.007  INFO 54449 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2014-06-11 16:55:16.064  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String learningspringboot.IssueController.index(org.springframework.ui.Model)
+2014-06-11 16:55:16.066  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2014-06-11 16:55:16.067  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2014-06-11 16:55:16.080  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.connect(java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.080  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.springframework.social.connect.web.ConnectController.connectionStatus(java.lang.String,org.springframework.web.context.request.NativeWebRequest,org.springframework.ui.Model)
+2014-06-11 16:55:16.080  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.springframework.social.connect.web.ConnectController.connectionStatus(org.springframework.web.context.request.NativeWebRequest,org.springframework.ui.Model)
+2014-06-11 16:55:16.080  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[GET],params=[oauth_token],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.oauth1Callback(java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.080  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[GET],params=[code],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.oauth2Callback(java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.081  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[GET],params=[error],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.oauth2ErrorCallback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.081  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.removeConnections(java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.081  INFO 54449 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/connect/{providerId}/{providerUserId}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.view.RedirectView org.springframework.social.connect.web.ConnectController.removeConnection(java.lang.String,java.lang.String,org.springframework.web.context.request.NativeWebRequest)
+2014-06-11 16:55:16.094  INFO 54449 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2014-06-11 16:55:16.094  INFO 54449 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2014-06-11 16:55:16.368  INFO 54449 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2014-06-11 16:55:16.450  INFO 54449 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080/http
+2014-06-11 16:55:16.452  INFO 54449 --- [           main] learningspringboot.Application           : Started Application in 3.161 seconds (JVM running for 3.504)
+^C2014-06-11 16:55:18.577  INFO 54449 --- [       Thread-1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29b3822c: startup date [Wed Jun 11 16:55:13 CDT 2014]; root of context hierarchy
+2014-06-11 16:55:18.580  INFO 54449 --- [       Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.176s
+[INFO] Finished at: Wed Jun 11 16:55:18 CDT 2014
+[INFO] Final Memory: 22M/439M
+[INFO] ------------------------------------------------------------------------

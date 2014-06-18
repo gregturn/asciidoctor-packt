@@ -3,3 +3,6 @@
 zip packt-backend-0.1.0.zip packt.conf packt.odt.styles
 
 zip packt-theme-0.1.0.zip packt.odt.styles
+
+
+zip bootconsole-filter-0.1.0.zip bootconsole bootconsole.groovy

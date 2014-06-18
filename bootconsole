@@ -1,0 +1,3 @@
+#!/bin/bash
+
+spring run -q `dirname $0`/bootconsole.groovy

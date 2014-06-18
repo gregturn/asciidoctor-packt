@@ -54,6 +54,17 @@ asciidoctor -T /path/to/your/clone/asciidoc-packt/slim -b packt your.adoc
 This will crank out your.fodt, and you can definitely open it up! It doesn't have all the parts and some things don't
 work quite right. But with a bit more effort, this might take over the work of this project.
 
+=== Asciidoctor issues
+
+* Verseblock works, https://github.com/gregturn/asciidoc-packt/commit/92ce0d2eabe5ad3f701d675ad8e5491562747d57[except I can't seem to plugin attribution with any suitable spacing]
+* Image block doesn't work, because https://github.com/gregturn/asciidoc-packt/commit/d514c7786fdf125182e42352ed7567137041a065[it won't inject any of the attributes]
+* Code listings work pretty nice. However, it would be nice to break it up into multiple lines and flag the last line
+as a Code_End style. (This doesn't work with my asciidoc/post_processor setup either.)
+* Tried to code Keyword, but it goes nuts when plugging in **Key_20_Word_20__5b_PACKT_5d_** as the style. So, using
+what I use in asciidoc: plugin **strong** and then replace it in post processing, only inside normal/tips/bullets. 
+(Should probably expand post proessing to include numbered lists.)
+* Admonitions and tables not yet started.
+
 == Outstanding issues
 
 This project is **highly experimental** . I haven't completed my manuscript yet.

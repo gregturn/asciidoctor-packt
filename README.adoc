@@ -14,8 +14,7 @@ If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, e
 ==== Getting started
 
 [verse, Greg L. Turnquist]
-"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work 
-as I embark on writing Learning Spring Boot."
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot."
 
 . First, grab this project with `git clone git@github.com:gregturn/asciidoc-packt.git`
 . Second, install http://asciidoctor.org
@@ -78,8 +77,7 @@ I have implemented support for.
 This one simply has the text, wrapped in quotes, followed by a long dash and the speaker's name.
 
 [verse, Greg L. Turnquist, http://blog.greglturnquist.com/2014/05/asciidoc-springboot-packtpub-awesome-tool-chain.html]
-"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work 
-as I embark on writing Learning Spring Boot."
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot."
 
 If you want to cite the source, add the third clause. It will be appended to the end after a ",". NOTE: There is no additional formatting applied, like URL types. Instead, the entire block is marked up with Packt's QUOTE style. Hence, you might want to
 debate if this is REALLY needed.

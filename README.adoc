@@ -50,6 +50,24 @@ Cheers!
 WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
 on you assume ALL risk.
 
+==== Quotes
+
+I decided to add quotes. There seemed to a lot of proverbial good ones bubbling up regarding Spring Boot, the topic of this
+endeavor. So I needed a way to wrap them up properly. It turns out that I preferred the verse over quote, so that's the styling
+I have implemented support for.
+
+[verse, Dan Allen]
+"If Markdown is a 1st-grader, then AsciiDoc is a PhD student."
+
+This one simply has the text, wrapped in quotes, followed by a long dash and the speaker's name.
+
+[verse, Greg L. Turnquist, http://blog.greglturnquist.com/2014/05/asciidoc-springboot-packtpub-awesome-tool-chain.html]
+"After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work 
+as I embark on writing Learning Spring Boot."
+
+If you want to cite the source, add the third clause. It will be appended to the end after a ",". NOTE: There is no additional formatting applied, like URL types. Instead, the entire block is marked up with Packt's QUOTE style. Hence, you might want to
+debate if this is REALLY needed.
+
 ==== Code
 
 Nothing is complete without looking at code.
@@ -64,7 +82,7 @@ returns values directly back to the client, without invoking any views.
 
 ===== Subsections
 
-Yes, we handle subsections, but so far, levels 2-5.
+Yes, we handle subsections, but so far, only levels 2-5.
 
 * Level 2 is for the chapter number
 * Level 3 is for the chapter title
@@ -101,6 +119,7 @@ Well, there are actually a lot of other styles provided by Packt not handled her
 * Code-within-Tips
 * Tips-within-Tips
 * Bullets-within-Tips-within-Tips
+* The entire appendix section of Packt's style guide.
 * etc.
 
 That is too much, and frankly, I don't much care for that stuff. Too detailed and really
@@ -117,6 +136,10 @@ copyright notices.
 
 This README page is structured in the theme of Packt. It might not render perfectly on GitHub, but when viewed through a text editor, 
 and certainly when converted by this backend to LibreOffice, it should provide a nice example of writing a manuscript for Packt.
+
+Be advised, the nature of this doc is Packt-like, but don't assume it represents the proper formatting of a book. This is how to 
+style things. Formatting governs what sections you'll have in a chapter. When to use tips, quotes, etc. is strictly editorial and 
+YOUR responsibility.
 
 NOTHING is done to make it look good on GitHub, because that is not the target. BUT...why waste a keen opportunity to document both
 environments?

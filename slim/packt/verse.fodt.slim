@@ -1,2 +1,8 @@
 text:p text:style-name="Quote_20__5b_PACKT_5d_"
   =content
+  - if (attr? :attribution)
+    =" — "
+    =attr :attribution
+  - if (attr? :citetitle)
+    =", "
+    =attr :citetitle

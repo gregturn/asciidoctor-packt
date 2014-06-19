@@ -1,8 +1,18 @@
-text:p text:style-name="Code_20__5b_PACKT_5d_"
-  - revised = content
-  - revised = revised.gsub(/\n/, '<text:line-break />')
-  - revised = revised.gsub(/\t/, '    ')
-  - revised = revised.gsub(/\s{8}/, '<text:s text:c="8"/>')
-  - revised = revised.gsub(/\s{4}/, '<text:s text:c="4"/>')
-  - revised = revised.gsub(/\s{2}/, '<text:s text:c="2"/>')
-  =revised
+- if attr?(:style, 'source')
+  text:p text:style-name="Code_20__5b_PACKT_5d_"
+    - revised = content
+    - revised = revised.gsub(/\n/, '<text:line-break />')
+    - revised = revised.gsub(/\t/, '    ')
+    - revised = revised.gsub(/\s{8}/, '<text:s text:c="8"/>')
+    - revised = revised.gsub(/\s{4}/, '<text:s text:c="4"/>')
+    - revised = revised.gsub(/\s{2}/, '<text:s text:c="2"/>')
+    =revised
+- else
+  text:p text:style-name="Command_20_Line_20__5b_PACKT_5d_"
+    - revised = content
+    - revised = revised.gsub(/\n/, '<text:line-break />')
+    - revised = revised.gsub(/\t/, '    ')
+    - revised = revised.gsub(/\s{8}/, '<text:s text:c="8"/>')
+    - revised = revised.gsub(/\s{4}/, '<text:s text:c="4"/>')
+    - revised = revised.gsub(/\s{2}/, '<text:s text:c="2"/>')
+    =revised

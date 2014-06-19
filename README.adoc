@@ -34,6 +34,20 @@ The output will be compacted XML (FODT), so it will be **hard** to read. That wh
 
 NOTE: You have to ensure `xmllint` is installed. It's not part of this project.
 
+You should see a nice output: `README.fodt`.
+
+----
+$ ls -ltr
+total 616
+-rw-r--r--@  1 gturnquist  staff   22836 May 30 08:27 packt_template.ott
+-rw-r--r--   1 gturnquist  staff  145233 May 30 08:28 packt_template.fodt
+drwxr-xr-x   4 gturnquist  staff     136 Jun 18 18:01 slim/
+drwxr-xr-x   4 gturnquist  staff     136 Jun 18 20:36 samples/
+drwxr-xr-x  11 gturnquist  staff     374 Jun 18 20:36 asciidoc/
+-rw-r--r--@  1 gturnquist  staff    6332 Jun 19 08:42 README.adoc
+-rw-r--r--   1 gturnquist  staff  131532 Jun 19 08:45 README.fodt
+----
+
 From here, you can start writing your own manuscript for Packt. The core content will be towards the end, inside the `<office:body>` tag. Everything
 before hand are Packt's styles embedded so LibreOffice will make everything look nice. 
 
@@ -42,6 +56,8 @@ Does your manuscript live elsewhere, and NOT in the same folder as this project?
 ----
 $ asciidoctor -T /path/to/your/clone/of/asciidoc-packt/slim -b packt your.adoc 
 ----
+
+You should now see a nice output.
 
 IMPORTANT: In order to open FODT files on Fedora, you must have the **libreoffice-xsltfilter** package installed.
 

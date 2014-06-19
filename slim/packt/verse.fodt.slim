@@ -1,8 +1,6 @@
 text:p text:style-name="Quote_20__5b_PACKT_5d_"
-  =content
+  ="\"#{content}\""
   - if (attr? :attribution)
-    =" — "
-    =attr :attribution
+    =" —#{(attr :attribution)}"
   - if (attr? :citetitle)
-    =", "
-    =attr :citetitle
+    =", #{(attr :citetitle)}"

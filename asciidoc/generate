@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# Regenerate Packt AsciiDoc stylesheet
-spring run packt.groovy

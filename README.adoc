@@ -1,5 +1,9 @@
-== 43
-=== Writing for Packt with Asciidoctor
+:author: Greg L. Turnquist
+:firstname: Greg
+:lastname: Turnquist
+:chapter_number: 43
+
+= Writing for Packt with Asciidoctor
 
 In this chapter, you'll learn:
 
@@ -11,7 +15,7 @@ In this chapter, you'll learn:
 If you'll notice, all lines of that bullet list are tagged **Bullet [PACKT]**, except the last. It's tagged
 **Bullet End [PACKT]**.
 
-==== Getting started
+== Getting started
 
 [verse, Greg L. Turnquist]
 After writing gobs of documents over the past year with AsciiDoc, I was strongly motivated to make that work as I embark on writing Learning Spring Boot.
@@ -65,7 +69,7 @@ Cheers!
 WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
 on you assume ALL risk.
 
-==== Quotes
+== Quotes
 
 I decided to add quotes. There seemed to a lot of proverbial good ones bubbling up regarding Spring Boot, the topic of this
 endeavor. So I needed a way to wrap them up properly. It turns out that I preferred the verse over quote, so that's the styling
@@ -82,7 +86,7 @@ After writing gobs of documents over the past year with AsciiDoc, I was strongly
 If you want to cite the source, add the third clause. It will be appended to the end after a ",". NOTE: There is no additional formatting applied, like URL types. Instead, the entire block is marked up with Packt's QUOTE style. Hence, you might want to
 debate if this is REALLY needed.
 
-==== Code
+== Code
 
 Nothing is complete without looking at code.
 
@@ -94,20 +98,37 @@ include::samples/app.groovy[]
 This chunk of code is Groovy (http://groovy.codehaus.org). It contains the `@RestController` to flag the entire class as being a controller that
 returns values directly back to the client, without invoking any views.
 
-===== Subsections
+== Subsections
 
-Yes, we handle subsections, but so far, only levels 2-5.
+Yes, we handle subsections.
 
-* Level 2 is for the chapter number
-* Level 3 is for the chapter title
-* Level 4 is for major sections
-* Level 5 is for sub-sections
+* Level 1 is the title of the chapter.
 
-It might be possible to go deeper, but I frankly haven't needed that yet.
+== Level 1 Section
+
+This is **Heading 1 [PACKT]**.
+
+=== Level 2 Section
+
+This is **Heading 2 [PACKT]**.
+
+==== Level 3 Section
+
+This is **Heading 3 [PACKT]**.
+
+===== Level 4 Section
+
+This is **Heading 4 [PACKT]**.
+
+====== Level 5 Section
+
+This is **Heading 5 [PACKT]**.
+
+As for **Heading 6 [PACKT]**, Asciidoctor doesn't go that deep. In my opinion, I have yet to read a book that needs this many levels.
 
 NOTE: This doesn't apply to Packt Cookbook formats.
 
-===== Tables
+=== Tables
 
 We sure do cover them. Tables are an integral part of writing any manuscript. Check out the
 following table.
@@ -122,11 +143,11 @@ following table.
 |====
 {empty}
 
-==== Images
+== Images
 
 image::samples/cat.jpg[width="65%" height="30%"]
 
-==== What are some of the things you don't cover?
+== What are some of the things you don't cover?
 
 Well, there are actually a lot of other styles provided by Packt not handled here. 
 
@@ -142,11 +163,11 @@ pulls me away from writing, so I don't support it.
 WARNING: All styles embedded in this backend are owned by Packt Publishing Ltd. (http://packtpub.com) and potentially subject to their
 copyright notices.
 
-==== Good to know stuff...
+== Good to know stuff...
 
 * Don't embed :author: or :title: attributes at the top. They end up getting printed which fouls up the product you must ship to Packt.
 
-==== In case you didn't notice
+== In case you didn't notice
 
 This README page is structured in the theme of Packt. It might not render perfectly on GitHub, but when viewed through a text editor, 
 and certainly when converted by this backend to LibreOffice, it should provide a nice example of writing a manuscript for Packt.

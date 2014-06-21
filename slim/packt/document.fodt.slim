@@ -1073,7 +1073,14 @@ office:document(
 
   office:body
     office:text text:use-soft-page-breaks='true'
-      text:p text:style-name='cover-text'
-        text:span text:style-name='author'
-          text:author-name text:fixed='true' =(attr :author)
+      - if (attr? :chapter_number)
+        text:h text:style-name="Chapter_20_Number_20__5b_PACKT_5d_" text:outline-level="1" 
+          text:bookmark-start text:name="_#{(attr :chapter_number)}"
+          =(attr :chapter_number)
+          text:bookmark-end text:name="_#{(attr :chapter_number)}"
+      - else
+        text:h text:style-name="Chapter_20_Number_20__5b_PACKT_5d_" text:outline-level="1" 
+          text:bookmark-start text:name="_1" 
+          |1
+          text:bookmark-end text:name="_1"
       =content

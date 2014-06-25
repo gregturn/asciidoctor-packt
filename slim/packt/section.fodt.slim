@@ -1,12 +1,12 @@
 - slevel = @level == 0 && @special ? 1 : @level
 - if slevel == 1
-  text:h text:style-name="Chapter_20_Number_20__5b_PACKT_5d_" text:outline-level="1" 
+  text:h text:style-name="Chapter_20_Number_20_5b_PACKT_5d_" text:outline-level="1" 
     text:bookmark-start text:name="#{@id}" 
     |#{title}
     text:bookmark-end text:name="#{@id}"
   =content
 - if slevel == 2
-  text:h text:style-name="Chapter_20_Title_20__5b_PACKT_5d_" text:outline-level="2" 
+  text:h text:style-name="Chapter_20_Title_20_5b_PACKT_5d_" text:outline-level="2" 
     text:bookmark-start text:name="#{@id}" 
     |#{title}
     text:bookmark-end text:name="#{@id}"

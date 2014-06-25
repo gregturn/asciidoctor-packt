@@ -145,6 +145,7 @@ copyright notices.
 ==== Good to know stuff...
 
 * Don't embed :author: or :title: attributes at the top. They end up getting printed which fouls up the product you must ship to Packt.
+* Because asciidoc considers double-underscores indicators of emphasis, all styles names are edited to replace __ with _ to avoid clashing
 
 ==== In case you didn't notice
 

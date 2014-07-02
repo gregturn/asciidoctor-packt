@@ -65,6 +65,29 @@ Cheers!
 WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
 on you assume ALL risk.
 
+==== Admonitions
+
+NOTE: This is for notes. They are mapped to *Information Box [Packt]*
+
+Break...
+
+TIP: Tips that are side items and break out of the flow of the main text. Mapped to *Tip [Packt]*
+
+...things...
+
+WARNING: Warning - Red alert! Put inside a *Information Box [Packt]* and then wrapped in *Italics [Packt]*
+
+...up...
+
+
+CAUTION: Same as warning.
+
+...or they'll...
+
+IMPORTANT: HIGHLY important. *Tip [Packt]* with *Italics [Packt]*
+
+...run together in a single chunk in LibreOffice.
+
 ==== Quotes
 
 I decided to add quotes. There seemed to a lot of proverbial good ones bubbling up regarding Spring Boot, the topic of this

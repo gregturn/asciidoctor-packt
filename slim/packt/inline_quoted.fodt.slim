@@ -1,13 +1,13 @@
 - case @type
 - when :strong
-  / the double underscore is escaped so it doesn't get interpretted as an unconstrained emphasis
   text:span text:style-name="Key_20_Word_20_5b_PACKT_5d_"
     =text
 - when :monospaced
   text:span text:style-name="Code_20_In_20_Text_20_5b_PACKT_5d_"
     =text
 - when :emphasis
-  =text
+  text:span text:style-name="Screen_20_Text_20_5b_PACKT_5d_"
+    =text
 - else
   text:span text:style="strong" data-style="else"
     =text

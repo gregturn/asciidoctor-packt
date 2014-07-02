@@ -94,6 +94,51 @@ include::samples/app.groovy[]
 This chunk of code is Groovy (http://groovy.codehaus.org). It contains the `@RestController` to flag the entire class as being a controller that
 returns values directly back to the client, without invoking any views.
 
+Every line of a code listing is marked **Code [Packt]** except the last. It's marked **Code End [Packt]**.
+
+==== Console outputs
+
+Create a listing block, but don't prefix it with a source flag, and this backend will instead mark it up with **Command Line[Packt]**.
+
+----
+$ asciidoctor -T slim -b packt README.adoc
+$ xmllint -format README.fodt | tail -10
+      <text:p text:style-name="Normal_20_5b_PACKT_5d_">This README page is structured in the theme of Packt. It might not render perfectly on GitHub, but when viewed through a text editor,
+and certainly when converted by this backend to LibreOffice, it should provide a nice example of writing a manuscript for Packt.</text:p>
+      <text:p text:style-name="Normal_20_5b_PACKT_5d_">Be advised, the nature of this doc is Packt-like, but don’t assume it represents the proper formatting of a book. This is how to
+style things. Formatting governs what sections you’ll have in a chapter. When to use tips, quotes, etc. is strictly editorial and
+YOUR responsibility.</text:p>
+      <text:p text:style-name="Normal_20_5b_PACKT_5d_">NOTHING is done to make it look good on GitHub, because that is not the target. BUT…why waste a keen opportunity to document both
+environments?</text:p>
+    </office:text>
+  </office:body>
+</office:document>
+----
+
+Every line of a code listing is marked **Command Line [Packt]** except the last. It's marked **Command Line End [Packt]**.
+
+==== Screen Text
+
+Text seen on the screen must be wrapped with **Screen Text [Packt]**.
+
+[options="header"]
+|====
+| Field        | Value
+| _Group_        | `learningspringboot`
+| _Artifact_     | `issue-manager`
+| _Name_         | `Issue Manager`
+| _Description_  | `Learning Spring Boot`
+| _Package Name_ | `learningspringboot`
+| _Styles_       | _Thymeleaf_
+| _Type_         | _Maven Project_
+| _Packaging_    | _Jar_
+| _Java Version_ | _1.7_
+| _Language_     | _Java_
+|====
+{empty}
+
+This table contains embedded options picked from the screen as well as things typed in.
+
 ===== Subsections
 
 Yes, we handle subsections, but so far, only levels 2-5.
@@ -124,7 +169,13 @@ following table.
 
 ==== Images
 
+Images are embedded through base64 encoding. They are NOT linked to external files.
+
 image::samples/cat.jpg[width="65%" height="30%"]
+
+The backend also embeds a Layout[Packt] tag afterwards with the basename of the file.
+
+NOTE: It's up to YOU to properly name the images according to Packt guidelines.
 
 ==== What are some of the things you don't cover?
 

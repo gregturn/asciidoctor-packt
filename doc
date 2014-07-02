@@ -1,0 +1,4 @@
+#!/bin/bash
+
+asciidoctor README.adoc
+asciidoctor -T slim -b packt README.adoc

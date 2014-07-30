@@ -147,16 +147,16 @@ Text seen on the screen must be wrapped with **Screen Text [Packt]**.
 [options="header"]
 |====
 | Field        | Value
-| _Group_        | `learningspringboot`
-| _Artifact_     | `issue-manager`
-| _Name_         | `Issue Manager`
-| _Description_  | `Learning Spring Boot`
-| _Package Name_ | `learningspringboot`
-| _Styles_       | _Thymeleaf_
-| _Type_         | _Maven Project_
-| _Packaging_    | _Jar_
-| _Java Version_ | _1.7_
-| _Language_     | _Java_
+| `Group'        | `learningspringboot`
+| `Artifact'     | `issue-manager`
+| `Name'         | `Issue Manager`
+| `Description'  | `Learning Spring Boot`
+| `Package Name' | `learningspringboot`
+| `Styles'       | `Thymeleaf'
+| `Type'         | `Maven Project'
+| `Packaging'    | `Jar'
+| `Java Version' | `1.7'
+| `Language'     | `Java'
 |====
 {empty}
 

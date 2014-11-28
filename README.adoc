@@ -62,8 +62,9 @@ IMPORTANT: In order to open FODT files on Fedora, you must have the **libreoffic
 
 Cheers!
 
-WARNING: This is HIGHLY experimental. I haven't completed the entire book submission process. If you take this
-on you assume ALL risk.
+WARNING: I have used this process to successfully publish http://blog.greglturnquist.com/category/learning-spring-boot[Learning
+Spring Boot]. I ran into a few hiccups, such as editors reporting they couldn't see images. I had no problem viewing embedded
+images, but I had Mac and they had Windows, so who knows? Nonetheless, there are no guarantees provided. If you take this on you assume ALL risk. You have been warned.
 
 ==== Admonitions
 
